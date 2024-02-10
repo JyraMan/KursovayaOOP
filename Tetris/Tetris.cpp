@@ -1,4 +1,3 @@
-#include <conio.h>
 #include <graphics.h>
 #include <dos.h>
 #include <stdlib.h>
@@ -8,7 +7,7 @@ int score=0;
 void clear();
 void main()
 {
-clrscr();
+system ("cls");
 int b,a=DETECT;
 initgraph(&a,&b,â€ â€œ);
 struct tetris
@@ -408,7 +407,7 @@ delay(100);
 settextstyle(DEFAULT_FONT, HORIZ_DIR, 2);
 setcolor(1);
 outtextxy(200,400,â€PRESS ANY KEY TO CONTINUEâ€);
-char cover=getch();
+char cover=std::cin.get();
 cover+=1;
 cleardevice();
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“ending of coverâ€”â€”â€”â€”â€”â€”â€”*/
@@ -432,7 +431,7 @@ outtextxy(0,380,â€be a real challenge.Want to play Tetris Game?â€);
 setcolor(1);
 settextstyle(GOTHIC_FONT,0,3);
 outtextxy(180,410,â€Press any key to continueâ€);
-char ins=getch();
+char ins=std::cin.get();
 ins+=1;
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“ending of instructionsâ€”â€”â€”â€”â€”â€”â€”*/
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“starting of controlsâ€”â€”â€”â€”â€”â€”â€”*/
@@ -447,7 +446,7 @@ outtextxy(100,190,â€To Move Left â€“ Press Dâ€);
 setcolor(1);
 settextstyle(GOTHIC_FONT,0,3);
 outtextxy(180,400,â€Press any key to continueâ€);
-char ctrl=getch();
+char ctrl=std::cin.get();
 ctrl+=1;
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“ending of coverâ€”â€”â€”â€”â€”â€”â€”*/
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“starting of levelâ€”â€”â€”â€”â€”â€”â€”*/
@@ -468,7 +467,7 @@ setcolor(1);
 settextstyle(GOTHIC_FONT,0,4);
 outtextxy(150,350,â€Enter the level of difficulty:â€);
 int del;
-char level=getch();
+char level=std::cin.get();
 cleardevice();
 /*â€”â€”â€”â€”â€”â€”â€”â€”â€”â€“ending of levelâ€”â€”â€”â€”â€”â€”â€”*/
 /*â€”â€”â€”â€”â€”â€”â€“edit the no. of bricks fallingâ€”â€”â€”â€”â€”*/
@@ -566,7 +565,7 @@ setfillstyle(1,2);
 setfillstyle(1,2);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.sql!=180)
 {
 x=getpixel(t.sqr-45,t.sqd-5);
@@ -630,7 +629,7 @@ setfillstyle(1,3);
 setfillstyle(1,3);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.boxl!=180)
 {
 x=getpixel(t.boxr-25,t.boxd-5);
@@ -691,7 +690,7 @@ setfillstyle(1,4);
 setfillstyle(1,4);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.l1l!=180)
 {
 x=getpixel(t.l1r-25,t.l1d-5);
@@ -761,7 +760,7 @@ setfillstyle(1,5);
 setfillstyle(1,5);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.l2l!=180)
 {
 x=getpixel(t.l2r-85,t.l2d-5);
@@ -823,7 +822,7 @@ setfillstyle(1,6);
 setfillstyle(1,6);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.block1l!=180)
 {
 x=getpixel(t.block1r-45,t.block1d-5);
@@ -894,7 +893,7 @@ setfillstyle(1,7);
 setfillstyle(1,7);
 if(kbhit())
 {
-int ch=getch();
+int ch=std::cin.get();
 if(ch==â€™aâ€™&& t.block2l!=180)
 {
 x=getpixel(t.block2r-85,t.block2d-5);
@@ -957,7 +956,7 @@ for(int over=1;over<=500;over++)
 outtextxy(200,over,â€Game Overâ€);
 delay(30);
 }
-getch();
+std::cin.get();
 }
 void clear()
 {
