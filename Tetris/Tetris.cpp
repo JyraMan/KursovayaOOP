@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <string>
 #include <chrono>
-#include <windows.h>
 #include <math.h>
 #include <conio.h>
 
